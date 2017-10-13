@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <servlet-name>hello</servlet-name>
+        <servlet-class>com.example.appengine.helloworld.HelloServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Articles</servlet-name>
+        <servlet-class>com.example.appengine.helloworld.Controllers.ArticleController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Injectors</servlet-name>
+        <servlet-class>com.example.appengine.helloworld.Controllers.InjectorController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PushController</servlet-name>
+        <servlet-class>com.example.appengine.helloworld.Controllers.PushController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Worker</servlet-name>
+        <servlet-class>com.example.appengine.helloworld.Controllers.Worker</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Articles</servlet-name>
+        <url-pattern>/Articles</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Injectors</servlet-name>
+        <url-pattern>/Injectors</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PushController</servlet-name>
+        <url-pattern>/Peush</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Worker</servlet-name>
+        <url-pattern>/Worker</url-pattern>
+    </servlet-mapping>
+</web-app>
